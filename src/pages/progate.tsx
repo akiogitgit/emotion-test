@@ -1,13 +1,17 @@
 import { NextPage } from 'next'
 import { css } from '@emotion/react'
 import { Layout } from '../components/Layout'
+import Image from 'next/image'
+import new_contents from '../../public/new_contents.svg'
 
 const Progate: NextPage = () => {
   return (
     <Layout>
       <section css={sectionNewContents}>
-        <div>新コンテンツ「HTML＆CSSプロジェクト」β版はこちら！</div>
-        <div>画像</div>
+        <div css={title}>
+          新コンテンツ「HTML＆CSSプロジェクト」β版はこちら！
+        </div>
+        <Image src={new_contents} alt='' />
       </section>
 
       <section>
@@ -23,65 +27,19 @@ const Progate: NextPage = () => {
   )
 }
 
-const layout = css({
-  display: 'grid',
-  gridTemplateRows: 'auto 1fr auto',
-  minHeight: '100vh',
-})
-
-const main = css({
-  margin: '0 auto',
-  padding: '30px',
-  width: '100%',
-})
-
-const header = css({
-  width: '100vw',
-  display: 'flex',
-  justifyContent: 'space-between',
-  boxShadow: '0px 3px 2px gainsboro',
-  color: 'darkslategray',
-})
-
-const nav = css({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '23px',
-})
-
-const navMenu = css({
-  fontSize: '12px',
-  cursor: 'pointer',
-  padding: '15px 0',
-  borderBottom: '3px solid white',
-  transition: 'all 300ms',
-  '&:hover': {
-    borderBottom: '3px solid turquoise',
-  },
-})
-
-const rightMenu = css({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '30px',
-  fontSize: '12px',
-  marginRight: '10px',
-})
-
-const dashBoardButton = css({
-  display: 'flex',
-  gap: '5px',
-  padding: '17px 0',
-  cursor: 'pointer',
-  transition: 'all 300ms',
-  '&:hover': {
-    background: 'gainsboro',
-  },
-})
-
 const sectionNewContents = css({
   background: 'turquoise',
   borderRadius: '5px',
+  padding: '10px 40px 0 50px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '60px',
+})
+
+const title = css({
+  color: 'white',
+  fontWeight: 600,
 })
 
 const sectionWebDev = css({
