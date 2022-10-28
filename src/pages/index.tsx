@@ -6,7 +6,9 @@ const Index: NextPage = () => {
     <>
       <h1 css={title}>Emotion</h1>
       <div css={[{ fontSize: '200px' }, title]}>aaa</div>
-      <button css={button('blue')}>Button</button>
+      <button css={button('blue')}>
+        Button<div>anpan</div>
+      </button>
     </>
   )
 }
@@ -35,5 +37,8 @@ const button = (color: 'red' | 'blue' | 'green' = 'red') =>
     '&:hover': {
       background: 'white',
       color: color,
+    },
+    '& div': {
+      margin: '20px 0',
     },
   })
