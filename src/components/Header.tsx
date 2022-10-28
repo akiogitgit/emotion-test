@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { css } from '@emotion/react'
+import Image from 'next/image'
 
 export const Header: FC = () => {
   return (
@@ -32,8 +33,9 @@ export const Header: FC = () => {
       </nav>
 
       <div css={rightMenu}>
+        <Image src='/headerIcon.jpg' width={30} height={30} alt='' />
         <button css={dashBoardButton}>
-          Akio (Lv.176)
+          AkioProgate (Lv.176)
           <span
             css={{
               rotate: '90deg',
@@ -77,13 +79,14 @@ const navMenu = css({
 const rightMenu = css({
   display: 'flex',
   alignItems: 'center',
-  gap: '30px',
+  gap: '10px',
   fontSize: '12px',
   marginRight: '10px',
 })
 
 const dashBoardButton = css({
   display: 'flex',
+  alignItems: 'center',
   gap: '5px',
   padding: '17px 0',
   cursor: 'pointer',

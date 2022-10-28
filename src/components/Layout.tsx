@@ -27,4 +27,5 @@ const main = css({
   margin: '0 auto',
   padding: '30px',
   width: '100%',
+  color: 'darkslategray',
 })
