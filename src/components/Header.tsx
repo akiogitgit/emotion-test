@@ -1,0 +1,94 @@
+import { FC } from 'react'
+import { css } from '@emotion/react'
+
+export const Header: FC = () => {
+  return (
+    <header css={header}>
+      <nav css={nav}>
+        <h1
+          css={{
+            background: 'darkslategray',
+            padding: '11px 16px',
+            color: 'white',
+            fontSize: '20px',
+            cursor: 'pointer',
+          }}
+        >
+          あ
+        </h1>
+        <div
+          css={[
+            navMenu,
+            {
+              borderBottom: '3px solid turquoise',
+            },
+          ]}
+        >
+          コース一覧
+        </div>
+        <div css={navMenu}>スライド検索</div>
+        <div css={navMenu}>ランキング</div>
+        <div css={navMenu}>ヘルプ</div>
+      </nav>
+
+      <div css={rightMenu}>
+        <button css={dashBoardButton}>
+          Akio (Lv.176)
+          <span
+            css={{
+              rotate: '90deg',
+              display: 'block',
+            }}
+          >
+            ➧
+          </span>
+        </button>
+        <div css={{ cursor: 'pointer' }}>🔔</div>
+      </div>
+    </header>
+  )
+}
+
+const header = css({
+  width: '100vw',
+  display: 'flex',
+  justifyContent: 'space-between',
+  boxShadow: '0px 3px 2px gainsboro',
+  color: 'darkslategray',
+})
+
+const nav = css({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '23px',
+})
+
+const navMenu = css({
+  fontSize: '12px',
+  cursor: 'pointer',
+  padding: '15px 0',
+  borderBottom: '3px solid white',
+  transition: 'all 300ms',
+  '&:hover': {
+    borderBottom: '3px solid turquoise',
+  },
+})
+
+const rightMenu = css({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '30px',
+  fontSize: '12px',
+  marginRight: '10px',
+})
+
+const dashBoardButton = css({
+  display: 'flex',
+  gap: '5px',
+  padding: '17px 0',
+  cursor: 'pointer',
+  transition: 'all 300ms',
+  '&:hover': {
+    background: 'gainsboro',
+  },
+})
