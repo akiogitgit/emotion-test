@@ -17,12 +17,6 @@ const Progate: NextPage = () => {
       <SectionWrapper>
         <LanguageCourse />
       </SectionWrapper>
-
-      <section>
-        <h2>言語別コース</h2>
-      </section>
-
-      <p>各レッスンの公開状況などの詳しい情報はこちらから確認してください。</p>
     </Layout>
   )
 }

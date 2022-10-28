@@ -34,6 +34,10 @@ export const LanguageCourse: FC = () => {
           />
         ))}
       </div>
+
+      <p css={{ margin: '80px 0', textAlign: 'center', fontSize: '18px' }}>
+        各レッスンの公開状況などの詳しい情報はこちらから確認してください。
+      </p>
     </section>
   )
 }
