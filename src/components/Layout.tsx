@@ -24,7 +24,7 @@ const layout = css({
 })
 
 const main = css({
-  margin: '0 auto',
+  margin: '50px auto',
   padding: '30px',
   width: '100%',
   color: 'darkslategray',
