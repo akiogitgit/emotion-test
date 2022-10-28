@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { css } from '@emotion/react'
 import graph from '../../../public/webDevGraph.svg'
+import language from '../../../public/language.svg'
 import nodeJs from '../../../public/webDevNodeJs.svg'
 import ruby from '../../../public/webDevRuby.svg'
 import Image from 'next/image'
@@ -33,7 +34,10 @@ export const WebDevelopmentCourse: FC = () => {
             Node.jsを使ってWebアプリの仕組みを理解し、実際に作れるようになりましょう！
           </p>
           <div css={nodeJsLanguage}>
-            <p>全4言語</p>
+            <p css={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+              <Image src={language} alt='' />
+              全4言語
+            </p>
             <p css={{ marginLeft: '10px' }}>HTML＆CSS</p>
             <p>JavaScript</p>
             <p>Node.js</p>
@@ -48,7 +52,17 @@ export const WebDevelopmentCourse: FC = () => {
         <h2 css={{ textAlign: 'center', fontSize: '19px' }}>
           Web開発コース(Ruby on Rails)
         </h2>
-        <p css={{ textAlign: 'center' }}>全3言語</p>
+        <p
+          css={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '5px',
+          }}
+        >
+          <Image src={language} alt='' />
+          全3言語
+        </p>
       </div>
     </section>
   )

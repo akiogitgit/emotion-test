@@ -4,6 +4,7 @@ import { Layout } from '../components/Layout'
 import { NewContents } from '../components/sections/NewContents'
 import { WebDevelopmentCourse } from '../components/sections/WebDevelopmentCourse'
 import { SectionWrapper } from '../components/SectionWrapper'
+import { LanguageCourse } from '../components/sections/LanguageCourse'
 
 const Progate: NextPage = () => {
   return (
@@ -11,6 +12,10 @@ const Progate: NextPage = () => {
       <NewContents />
       <SectionWrapper>
         <WebDevelopmentCourse />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <LanguageCourse />
       </SectionWrapper>
 
       <section>
