@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { css } from '@emotion/react'
+import Image from 'next/image'
 
 export const Header: FC = () => {
   return (
@@ -8,13 +9,13 @@ export const Header: FC = () => {
         <h1
           css={{
             background: 'darkslategray',
-            padding: '11px 16px',
+            padding: '11px 20px',
             color: 'white',
             fontSize: '20px',
             cursor: 'pointer',
           }}
         >
-          あ
+          β
         </h1>
         <div
           css={[
@@ -32,8 +33,9 @@ export const Header: FC = () => {
       </nav>
 
       <div css={rightMenu}>
+        <Image src='/headerIcon.jpg' width={30} height={30} alt='' />
         <button css={dashBoardButton}>
-          Akio (Lv.176)
+          AkioProgate (Lv.176)
           <span
             css={{
               rotate: '90deg',
@@ -43,7 +45,7 @@ export const Header: FC = () => {
             ➧
           </span>
         </button>
-        <div css={{ cursor: 'pointer' }}>🔔</div>
+        <div css={{ cursor: 'pointer', fontSize: '20px' }}>🔔</div>
       </div>
     </header>
   )
@@ -55,6 +57,9 @@ const header = css({
   justifyContent: 'space-between',
   boxShadow: '0px 3px 2px gainsboro',
   color: 'darkslategray',
+  position: 'fixed',
+  background: 'white',
+  zIndex: 100,
 })
 
 const nav = css({
@@ -77,13 +82,14 @@ const navMenu = css({
 const rightMenu = css({
   display: 'flex',
   alignItems: 'center',
-  gap: '30px',
+  gap: '10px',
   fontSize: '12px',
-  marginRight: '10px',
+  marginRight: '40px',
 })
 
 const dashBoardButton = css({
   display: 'flex',
+  alignItems: 'center',
   gap: '5px',
   padding: '17px 0',
   cursor: 'pointer',
